@@ -1,0 +1,587 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+:root{
+  --navHeight:100px;
+}
+
+/* 
+======================
+      navbar Style
+======================
+*/
+#container {
+  z-index: 100;
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+  background-color: #1e2d3b;
+  position: fixed;
+  width: 100%;
+  top: 0;
+}
+/* //==1===// */
+.container {
+  width: 1000px;
+  margin: 0 auto;
+}
+/* .test {
+  position: absolute;
+  top: 100px;
+} */
+
+.logo {
+  height: 70px;
+  width: 70px;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
+.logo-style {
+  background-color: #edcd1f;
+  width: 300px;
+  height: var(--navHeight);
+  display: flex;
+  justify-content: space-evenly;
+  box-shadow: 0 0 10px #1e2d3b;
+}
+.logo-span {
+  margin-top: 25px;
+}
+.logo-span1 {
+  font-weight: bold;
+}
+a {
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+a:hover {
+  color: #edcd1f;
+}
+a:active {
+  color: #edcd1f;
+}
+#btn-test {
+  display: none;
+}
+.list {
+  display: flex;
+  justify-content: flex-end;
+  height: 100%;
+  align-items: center;
+  gap: 5%;
+  box-shadow: 0 0 10px #edcd1f;
+  padding-right: 5%;
+  font-size: 18px;
+}
+/* 
+======================
+     Video
+======================
+*/
+section {
+  position: relative;
+  top:var(--navHeight);
+  left: 0;
+  overflow: hidden;
+  
+}
+video {
+  width: 100%;
+}
+.text {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: auto;
+  text-align: center;
+  letter-spacing: 0.05em;
+  font-weight: bold;
+  font-size: 50px;
+  color: white;
+  padding: 50px;
+  cursor: pointer;
+}
+.text:hover {
+  color: #edcd1f;
+}
+/* 
+======================
+      Services style
+======================
+*/
+.titleService {
+  text-align: center;
+  margin: 20px 0px 0px 0px;
+  font-size: 50px;
+  color: #1e2d3b;
+}
+.services {
+  padding-top: var(--navHeight);
+  overflow: hidden;
+}
+.line {
+  text-align: center;
+  background: #edcd1f;
+  height: 10px;
+  width: 200px;
+
+  margin: 0 auto 20px;
+  display: block;
+}
+.services .services-INFO {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 50px;
+  padding: 20px;
+}
+.services .services-INFO img {
+  width: 100%;
+}
+.services-row{
+  box-shadow: 3px 3px 5px #3d5975;
+  display: grid;
+  gap: 20px;
+  background-color: rgb(241, 240, 235);
+  padding: 20px;
+}
+
+.font1 {
+  font-weight: bold;
+  color: #3d5975;
+  padding-left: 10px;
+}
+
+.font {
+  padding: 10px 10px 30px 10px;
+  text-align: justify;
+}
+
+/* 
+======================
+      AboutUs Style
+======================
+*/
+.about-us {
+  padding-top: var(--navHeight);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  overflow: hidden;
+}
+.about-us .part1 {
+  background: rgb(241, 240, 235);
+  line-height: 30px;
+  text-align: center;
+}
+.about-us .part1 p {
+  padding: 0px 20px 0px 286px;
+}
+
+.title-about-us {
+  font-weight: bold;
+  padding-top: 20px;
+  margin-right: 55px;
+}
+
+/* _______________________ */
+.cont {
+  margin: 0 auto;
+  background: #edcd1f;
+}
+.num {
+  width: 80%;
+  margin: 0 auto;
+  padding: 25px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  text-align: center;
+  align-items: center;
+}
+.num-items {
+  color: #3d5975;
+  font-size: 25px;
+}
+.break {
+  width: 3px;
+  height: 80px;
+  background-color: wheat;
+}
+/* 
+======================
+Projects Style
+======================
+*/
+
+.title-project {
+  padding-top: 100px;
+  text-align: center;
+  margin-top: 25px;
+  font-size: 50px;
+}
+.project1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+.container-p {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.container-p .hexagon {
+  position: relative;
+  width: 350px;
+  height: 400px;
+  margin: 50px 20px 100px;
+  transition: 0.5s;
+}
+.container-p .hexagon .shape {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+  clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+  transition: transform.5s;
+}
+.hexagon::after {
+  content: "";
+  position: absolute;
+  background: radial-gradient(rgba(0, 0, 0, 0.4), transparent, transparent);
+  width: 100%;
+  height: 50px;
+  border-radius: 50%;
+  bottom: -20%;
+  transition: 0.5s;
+}
+.hexagon:hover .shape {
+  transform: translateY(-10%);
+}
+.hexagon:hover:after {
+  transform: scale(0.8);
+  opacity: 0.4;
+}
+img {
+  object-fit: cover;
+  width: 105%;
+}
+
+/* 
+======================
+      Clients Style
+======================
+*/
+.clients {
+  background: rgb(233, 221, 221);
+  overflow: hidden;
+}
+.title-clients {
+  text-align: center;
+  margin-top: 25px;
+  padding: 20px;
+  font-size: 50px;
+}
+.clients-logos1 {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* 
+======================
+      Contact Style
+======================
+*/
+.title-contact {
+  text-align: center;
+  padding: 100px 20px 20px;
+  font-size: 50px;
+}
+.map {
+  width: 1000px;
+  height: 500px;
+  margin: 0 auto;
+}
+
+/* 
+======================
+      Footer Style
+======================
+*/
+.footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: center;
+}
+.footer-items {
+  text-align: left;
+  padding: 20px;
+}
+.footer-items2 {
+  padding: 20px;
+}
+.last {
+  margin-top: 50px;
+}
+.line1 {
+  color: #edcd1f;
+}
+.form {
+  display: grid;
+  gap: 5px;
+  width: 400px;
+}
+.submit {
+  margin-top: 10px;
+  width: 100px;
+  margin-left: 315px;
+  background-color: black;
+  color: #edcd1f;
+  height: 30px;
+  border-radius: 30px;
+  cursor: pointer;
+  outline: none;
+}
+
+.title {
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+.end-line {
+  margin: 50px 0;
+  text-align: center;
+  font-weight: bold;
+}
+
+/* ------------------------------max-width: 500px----------------------------------- */
+/* Small (smaller than 640px)
+Medium (641px to 1007px)
+Large (1008px and larger) */
+@media (max-width: 640px) {
+  @import url("https://use.fontawesome.com/releases/v5.9.0/css/all.css");
+  :root{
+    --navHeight:85px
+  }
+  .co-test {
+    width: 483px;
+    overflow: hidden;
+  }
+
+  #container {
+    z-index: 100;
+    display: block;
+    background-color: #1e2d3b;
+    position: fixed;
+    width: 100%;
+    top: 0;
+  }
+  .logo-style {
+    background-color: #edcd1f;
+    width: 45%;
+    height: 70px;
+
+    box-shadow: 0 0 10px #1e2d3b;
+  }
+  .logo {
+    width: 50px;
+    height: 50px;
+  }
+  .nav-btn {
+    position: absolute;
+    top: 0px;
+    right: -100px;
+    transition: 0.5s;
+    width: 100px;
+  }
+  .nav-btn-active {
+    transform: translateX(-100px);
+  }
+  .list {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    background: #1e2d3b;
+    padding: 100px 10px;
+    gap: 25px;
+    height: 100vh;
+    box-shadow: none;
+  }
+
+  #btn-test {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    position: absolute;
+    font-size: 30px;
+    font-weight: bolder;
+    top: 10px;
+    left: -50px;
+    width: 50px;
+    height: 50px;
+
+    border-radius: 50%;
+    text-align: center;
+  }
+  /* video */
+  section {
+    top: 70px;
+    margin-bottom: 0px;
+  }
+
+  .text {
+    font-size: 20px;
+    color: #edcd1f;
+  }
+  /*-------------- service-------------- */
+  .contain-service {
+    width: 100%;
+    padding: 0px;
+    margin: 0px;
+    text-align: center;
+    margin-right: 100px;
+  }
+  .services .services-INFO {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .titleService {
+    font-size: 30px;
+  }
+  .line {
+    width: 150px;
+  }
+  /* ------------about us-------------- */
+  .about-us {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: var(--navHeight) 20px 10px;
+  }
+  .about-us .part1 p {
+    line-height: 1.2;
+    text-align: justify;
+    padding: 20px;
+  }
+  /*--------------- num---------------- */
+  .projects {
+    width: 99%;
+  }
+
+  .cont .num {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  .break {
+    display: none;
+  }
+  .num-items {
+    border-bottom: 3px solid wheat;
+    padding: 20px;
+  }
+  .map {
+    width: 90%;
+    height: 250px;
+  }
+  /* ---------------footer------------------ */
+  .container{
+    width: 100%;
+  }
+  .footer-items {
+    margin-left: 0px;
+    padding: 0px;
+  }
+  .footer {
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 0px;
+    margin: 20px;
+  }
+  .form {
+    width: 100%;
+  }
+  .submit {
+    margin-left: 70%;
+  }
+  .end-line {
+    margin: 20px;
+  }
+}
+/* ------------------------------max-width: 1007px----------------------------------- */
+@media (min-width: 641px) and (max-width: 1007px) {
+  :root{
+    --navHeight:85px;
+  }
+  
+  .logo-style {
+    width: 215px;
+  }
+  .list {
+    justify-content: center;
+    padding: 0;
+    font-size: 15px;
+  }
+  .text {
+    font-size: 35px;
+    color: #edcd1f;
+  }
+  /* ----------------Services----------------- */
+  .container {
+    width: 100%;
+  }
+  .services .services-INFO {
+    width: 100%;
+    display: flex;
+    gap:5px;
+    
+  }
+  /* --------------About Us-------------------- */
+  .about-us {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: var(--navHeight) 20px 10px;
+  }
+  .about-us .part1 p {
+    line-height: 1.2;
+    text-align: justify;
+    padding: 20px;
+  }
+  /* ------------Project-------------- */
+  .project1 .container-p {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  /* ----------------Footer------------- */
+  .map {
+    width: 95%;
+  }
+  .footer {
+    text-align: center;
+    grid-template-columns: 1fr;
+    margin-left: 0px;
+    width: 100%;
+  }
+  .footer-items {
+    margin-left: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+.form {
+  text-align: left;
+}
+}
